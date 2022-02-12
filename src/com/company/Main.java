@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int lesson = 0;
+        int lesson;
 
         Scanner input = new Scanner(System.in);
         System.out.println("Задачи:\n" +
@@ -46,7 +46,7 @@ public class Main {
         System.out.println("Введите элементы массива: ");
         Scanner arrayInput = new Scanner(System.in);
 
-        int array[] = new int[length];
+        int[] array = new int[length];
         for (int i = 0; i < length; i++) {
             array[i] = arrayInput.nextInt();
         }
@@ -68,7 +68,7 @@ public class Main {
         System.out.println("Введите элементы массива: ");
         Scanner arrayInput = new Scanner(System.in);
 
-        int array[] = new int[length];
+        int[] array = new int[length];
         for (int i = 0; i < length; i++) {
             array[i] = arrayInput.nextInt();
         }
@@ -86,7 +86,7 @@ public class Main {
         System.out.println("Введите элементы массива: ");
         Scanner arrayInput = new Scanner(System.in);
 
-        int array[] = new int[length];
+        int[] array = new int[length];
         for (int i = 0; i < length; i++) {
             array[i] = arrayInput.nextInt();
         }

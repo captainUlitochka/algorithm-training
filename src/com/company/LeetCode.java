@@ -55,7 +55,7 @@ public class LeetCode {
     }
 
     public static int mostWordsFound_2114(String[] sentences) {
-        int words = 0;
+        int words;
         int max = 0;
         for (int i = 0; i < sentences.length; i++) {
             //words = (int)sentences[i].chars().filter(ch -> ch == ' ').count() + 1;
