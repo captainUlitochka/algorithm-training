@@ -15,7 +15,8 @@ public class Main {
                 "[4] Скользящая сумма\n" +
                 "[5] Предложения с большим количеством слов\n" +
                 "[6] Отзеркаливание слова\n" +
-                "[7] Fizz Buzz\n");
+                "[7] Fizz Buzz\n" +
+                "[8] Анаграммы \n");
         System.out.println("Введите номер запускаемой задачи: ");
         lesson = input.nextInt();
 
@@ -27,6 +28,7 @@ public class Main {
         else if (lesson == 5) sentencesLesson();
         else if (lesson == 6) reverseWordLesson();
         else if (lesson == 7) fizzbuzzLesson();
+        else if (lesson == 8) anagramLesson();
 
     }
 
@@ -130,6 +132,19 @@ public class Main {
         int value = inputValue.nextInt();
 
         System.out.println(LeetCode.fizzBuzz_412(value));
+    }
+
+    private static void anagramLesson() {
+        System.out.println("Введите первое слово: ");
+        Scanner inputWord1 = new Scanner(System.in);
+        String word1 = inputWord1.nextLine();
+
+        System.out.println("Введите второе слово: ");
+        Scanner inputWord2 = new Scanner(System.in);
+        String word2 = inputWord2.nextLine();
+
+        System.out.println("Являются ли эти слова анаграммами");
+        System.out.println(LeetCode.validAnagram_242(word1, word2));
     }
 
 }
