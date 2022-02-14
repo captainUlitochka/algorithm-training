@@ -16,7 +16,8 @@ public class Main {
                 "[5] Предложения с большим количеством слов\n" +
                 "[6] Отзеркаливание слова\n" +
                 "[7] Fizz Buzz\n" +
-                "[8] Анаграммы \n");
+                "[8] Анаграммы \n" +
+                "[9] Самая часто встречающаяся цифра\n");
         System.out.println("Введите номер запускаемой задачи: ");
         lesson = input.nextInt();
 
@@ -29,7 +30,7 @@ public class Main {
         else if (lesson == 6) reverseWordLesson();
         else if (lesson == 7) fizzbuzzLesson();
         else if (lesson == 8) anagramLesson();
-
+        else if (lesson == 9) majorityElementLesson();
     }
 
     private static void fibonacciLesson() {
@@ -146,5 +147,23 @@ public class Main {
         System.out.println("Являются ли эти слова анаграммами");
         System.out.println(LeetCode.validAnagram_242(word1, word2));
     }
+
+    private static void majorityElementLesson() {
+        System.out.println("Укажите размерность массива: ");
+        Scanner lengthInput = new Scanner(System.in);
+        int length = lengthInput.nextInt();
+
+        System.out.println("Введите элементы массива (обязательно должен быть повторяющийся > nums.length/2 элемент: ");
+        Scanner arrayInput = new Scanner(System.in);
+
+        int[] array = new int[length];
+        for (int i = 0; i < length; i++) {
+            array[i] = arrayInput.nextInt();
+        }
+        System.out.println("Повторяющийся элемент: ");
+        System.out.println(LeetCode.majorityElement_169(array));
+
+    }
+
 
 }

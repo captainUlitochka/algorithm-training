@@ -107,4 +107,9 @@ public class LeetCode {
         return Arrays.equals(word1, word2);
 
     }
+
+    public static int majorityElement_169(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length/2];
+    }
 }
